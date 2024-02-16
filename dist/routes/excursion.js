@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const excursion_1 = require("../controllers/excursion");
+const router = (0, express_1.Router)();
+router.get('/', excursion_1.getExcursions);
+router.get('/:id', excursion_1.getExcursion);
+router.delete('/:id', excursion_1.deleteExcursion);
+router.post('/', excursion_1.postExcursion);
+router.put('/:id', excursion_1.updateExcursion);
+exports.default = router;
